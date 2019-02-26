@@ -1,6 +1,0 @@
-*.o
-*.gcda
-*.gcno
-main.c
-units_tests
-libasm.so

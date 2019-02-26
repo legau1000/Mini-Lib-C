@@ -9,8 +9,8 @@ NAME		= 	libasm.so
 
 SRC_DIR		= 	src/
 
-SRC_FILES 	= 	strlen.asm
-				# strchr.asm	\
+SRC_FILES 	= 	strlen.asm	\
+				strchr.asm	
 				# strcmp.asm	\
 				# rindex.asm	\
 				# strcspn.asm
