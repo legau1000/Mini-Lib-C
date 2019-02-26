@@ -18,7 +18,7 @@ NAME	=	units_tests
 $(NAME):	$(OBJ)
 	make -C ../
 	gcc -o $(NAME) $(OBJ) -lcriterion -lgcov ../libasm.so
-	./units_tests
+	LD_PRELOAD=../libasm.so ./units_tests
 		@echo Compilation tests faite!
 
 all:	$(NAME)
