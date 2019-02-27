@@ -12,6 +12,7 @@ SRC_DIR		= 	src/
 SRC_FILES 	= 	strlen.asm	\
 				strchr.asm	\
 				memset.asm	\
+				memmove.asm	\
 				memcpy.asm
 				# strcmp.asm	\
 				# rindex.asm	\
