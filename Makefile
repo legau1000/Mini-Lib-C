@@ -14,6 +14,7 @@ SRC_FILES 	= 	strlen.asm	\
 				memset.asm	\
 				memmove.asm	\
 				strcmp.asm	\
+				strncmp.asm	\
 				memcpy.asm
 				# strcmp.asm	\
 				# rindex.asm	\

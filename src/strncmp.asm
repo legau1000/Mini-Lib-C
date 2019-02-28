@@ -2,18 +2,22 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strcmp:function
+GLOBAL strncmp:function
 
-strcmp:
+strncmp:
 	cmp rdi, 0
 		je RETURN
 	cmp rsi, 0
+		je RETURN
+	cmp rdx, 0
 		je RETURN
 	mov rcx, 0
 	jmp loop_start
 	ret
 
 loop_start:
+	cmp rcx, rdx
+		je RETURN
 	cmp byte [rsi + rcx], 0
 		je FIRST_BIG
 	cmp byte [rdi + rcx], 0
