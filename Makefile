@@ -9,16 +9,15 @@ NAME		= 	libasm.so
 
 SRC_DIR		= 	src/
 
-SRC_FILES 	= 	strlen.asm	\
-				strchr.asm	\
-				memset.asm	\
-				memmove.asm	\
-				strcmp.asm	\
-				strncmp.asm	\
+SRC_FILES 	= 	strlen.asm		\
+				strchr.asm		\
+				memset.asm		\
+				memmove.asm		\
+				strcmp.asm		\
+				strcasecmp.asm	\
+				strncmp.asm		\
 				memcpy.asm
-				# strcmp.asm	\
 				# rindex.asm	\
-				# strcspn.asm
 
 SRCS		= 	$(addprefix $(SRC_DIR), $(SRC_FILES))
 
