@@ -18,6 +18,7 @@ SRC_FILES 	= 	strlen.asm		\
 				strncmp.asm		\
 				rindex.asm		\
 				strstr.asm		\
+				strcspn.asm		\
 				memcpy.asm
 
 .SILENT:
