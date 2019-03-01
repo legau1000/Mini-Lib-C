@@ -20,6 +20,8 @@ SRC_FILES 	= 	strlen.asm		\
 				strstr.asm		\
 				memcpy.asm
 
+.SILENT:
+
 SRCS		= 	$(addprefix $(SRC_DIR), $(SRC_FILES))
 
 OBJ			= 	$(SRCS:.asm=.o)
