@@ -17,6 +17,7 @@ SRC_FILES 	= 	strlen.asm		\
 				strcasecmp.asm	\
 				strncmp.asm		\
 				rindex.asm		\
+				strpbrk.asm		\
 				strstr.asm		\
 				strcspn.asm		\
 				memcpy.asm
