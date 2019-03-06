@@ -2,9 +2,9 @@ BITS 64
 
 SECTION .text
 
-GLOBAL _strstr:function
+GLOBAL strstr:function
 
-_strstr:
+strstr:
 	mov rcx, 0
 	mov r8, 0
 	cmp rdi, 0
