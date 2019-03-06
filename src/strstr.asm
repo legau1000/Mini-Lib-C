@@ -2,23 +2,33 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strstr:function
+GLOBAL _strstr:function
 
-strstr:
-	mov rax, 0
+_strstr:
+	mov rcx, 0
+	mov r8, 0
 	cmp rdi, 0
-		je RETURN
+		je NULL
 	cmp rsi, 0
-		je RETURN
+		je NULL
 	jmp loop_start
 	ret
 
 loop_start:	
-	cmp byte [rdi + rax], sil
+	cmp byte [rdi + rcx], 0
 		je RETURN
-	add rax, 1
-	jne	loop_start
+	cmp byte [rsi + rcx], 0
+		je NULL
+	mov r8b, byte [rsi + rcx]
+	cmp byte [rdi + rcx], r8b
+		jne NULL
+	add rcx, 1
+	jmp loop_start
+
+NULL:
+	mov rax, 0
+	ret
 
 RETURN:
-	add rax, rdi
+	mov rax, rdi
 	ret
