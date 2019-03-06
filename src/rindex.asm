@@ -25,7 +25,7 @@ loop_start:
 	cmp byte [rdi + rcx], sil
 		je RETURN
 	sub rcx, 1
-	jne	loop_start
+	jmp	loop_start
 
 NULL:
 	mov rax, 0
