@@ -16,7 +16,7 @@ strcspn:
 
 loop_start:
 	cmp byte [rdi + rcx], 0
-		je RETURN
+		je RETURN_GOOD
 	jmp second_loop
 
 second_loop:
