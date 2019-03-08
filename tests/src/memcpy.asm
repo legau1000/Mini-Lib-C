@@ -2,10 +2,12 @@ BITS 64
 
 SECTION .text
 
-GLOBAL memset:function
+GLOBAL my_memcpy:function
 
-memset:
+my_memcpy:
 	cmp rdi, 0
+		je RETURN
+	cmp rsi, 0
 		je RETURN
 	cmp rdx, 0
 		je RETURN
@@ -16,7 +18,8 @@ memset:
 loop_start:	
 	cmp r10, rdx
 		je RETURN
-	mov [rdi + r10], sil
+	mov r8, [rsi + r10]
+	mov [rdi + r10], r8b
 	add r10, 1
 	jne	loop_start
 

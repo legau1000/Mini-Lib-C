@@ -2,9 +2,9 @@ BITS 64
 
 SECTION .text
 
-GLOBAL rindex:function
+GLOBAL my_rindex:function
 
-rindex:
+my_rindex:
 	cmp rdi, 0
 		je RETURN
 	mov rcx, 0

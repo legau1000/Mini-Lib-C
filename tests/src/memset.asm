@@ -2,9 +2,9 @@ BITS 64
 
 SECTION .text
 
-GLOBAL memset:function
+GLOBAL my_memset:function
 
-memset:
+my_memset:
 	cmp rdi, 0
 		je RETURN
 	cmp rdx, 0

@@ -5,9 +5,18 @@
 ## makefile
 ##
 
-CFLAGS	=	-I../include --coverage
+CFLAGS	=	-I../include
 
-SRC	=	tests_strlen.c
+SRC	=	main.c				\
+		tests_strlen.c		\
+		tests_memset.c		\
+		tests_memcpy.c		\
+		tests_memmove.c		\
+		tests_strcmp.c		\
+		tests_strncmp.c		\
+		tests_strcasecmp.c	\
+		tests_rindex.c		\
+		tests_strchr.c
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -16,10 +25,12 @@ NAME	=	units_tests
 .SILENT:
 
 $(NAME):	$(OBJ)
-	make -C ../
-	gcc -o $(NAME) $(OBJ) -lcriterion -lgcov ../libasm.so
-	LD_PRELOAD=../libasm.so ./units_tests
-		@echo Compilation tests faite!
+	make -C src/
+	gcc -o $(NAME) $(OBJ) -lasm
+	echo ------------------------------------------------------------
+	./units_tests
+	echo ------------------------------------------------------------
+	echo "End of Units Tests ASM, See you later :)"
 
 all:	$(NAME)
 
