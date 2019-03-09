@@ -16,6 +16,9 @@ SRC	=	main.c				\
 		tests_strncmp.c		\
 		tests_strcasecmp.c	\
 		tests_rindex.c		\
+		tests_strstr.c		\
+		tests_strpbrk.c		\
+		tests_strcspn.c		\
 		tests_strchr.c
 
 OBJ	=	$(SRC:.c=.o)

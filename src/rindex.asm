@@ -18,7 +18,7 @@ get_end:
 	jmp get_end
 
 loop_start:
-	cmp rcx, 0
+	cmp rcx, -1
 		je NULL
 	cmp byte [rdi + rcx], sil
 		je RETURN

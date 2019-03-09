@@ -16,8 +16,20 @@ void tests_memmove(int);
 void tests_strncmp(int);
 void tests_strcasecmp(int);
 void tests_rindex(int);
+void tests_strstr(int);
+void tests_strpbrk(int);
+void tests_strcspn(int);
 
-int main()
+static void extend_main(void)
+{
+    tests_strstr(0);
+    printf("-----------------------\n");
+    tests_strpbrk(0);
+    printf("-----------------------\n");
+    tests_strcspn(0);
+}
+
+int main(void)
 {
     tests_strlen(0);
     printf("-----------------------\n");
@@ -37,4 +49,6 @@ int main()
     printf("-----------------------\n");
     tests_rindex(0);
     printf("-----------------------\n");
+    extend_main();
+    return (0);
 }
