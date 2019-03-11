@@ -9,7 +9,7 @@
 #include <string.h>
 #include <unistd.h>
 
-char *my_strcspn(const char *s, const char *accept);
+size_t my_strcspn(const char *s, const char *accept);
 
 void tests_strcspn(int nb_good)
 {
